@@ -1,0 +1,258 @@
+<!DOCTYPE>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+
+
+.slideshow-container {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px) {
+  .slprev, .slnext,.text {font-size: 11px}
+}
+</style>
+      <title>Horti Marconiani</title>
+	  <link rel="StyleSheet" href="StyleSheet.css" type="text/css"/>
+   </head>
+   <body>
+      <div id="page">
+         <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="polo.jpg" style="width:100%;height: 95%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="orto-tiburtina-1.jpg" style="width:100%;height: 95%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="piselli-1.jpg" style="width:100%;height: 95%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)"><</a>
+<a class="next" onclick="plusSlides(1)">></a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length} ;
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+         <div class="nav">
+            <ul>
+			   <li ><a class="active" href="#home">Home</a></li>
+			   <li><a href="#gli orti">Gli Orti</a></li>
+			   <li><a href="#contatti">Contatti</a></li>
+			</ul>
+         </div>
+		 <div class="top" id="home">
+        
+			<div id="text1">
+			   <h1>Horti Marconiani</h1>
+			</div>
+		 </div>
+		  <div class="mid" id="gli orti">
+		    
+			
+			   <h1>Il ruolo degli orti nel corso della storia</h1>
+                <img src="giardino_antico.jpg" alt="Giardino Antico"/>
+                <p>In origine era il paradiso perduto: un giardino o orto delle delizie in cui l’umanità viveva in pace, a stretto contatto con la divinità.
+Questa rappresentazione è comune a molti popoli antichi: uno spazio concluso in cui la natura benigna fornisce spontaneamente ogni cibo già commestibile, frutta e verdura, latte e miele…; il tutto tra alberi ombrosi, fiori di ogni genere e sorgenti e corsi d’acqua, dove persino gli animali feroci sono mansueti.
+Da questo paradiso originario, da questo angolo di terra che nutre senza la fatica del lavoro, l’uomo si è staccato, iniziando il suo percorso di agricoltore e di pastore, ma serbando sempre la nostalgia di questo mitico luogo perduto per sempre, almeno nella vita terrena.
+Questo il motivo che ha spinto nei secoli le più diverse civiltà ad immaginare e poi tentare di ricostruire il mitico paradiso perduto.</p>
+
+                <img src ="egitto.jpg" alt="Egitto"/>
+                <p>I giardini più antichi, di cui abbiamo diverse testimonianze, sono quelli egizi (circa 1600-1400 a.C). Nell’antico Egitto, il giardino era un luogo molto importante simbolo di vita e il lago sempre presente, oltre ad essere una scorta d’acqua, rappresentava l’oceano primordiale.</p>
+
+             <h1>Lo sviluppo nell'età medievale</h1>
+                <img src="arabo.jpg" alt="Arabo"/>
+                <p>Il Giardino arabo era progettato per rappresentare il paradiso, pieno di colture ornamentali, frutteto e orto che soddisfano tutti e cinque i sensi: la vista con i colori dei fiori e le linee armoniose; l’olfatto con i profumi intensi di ogni stagione; il tatto con la freschezza degli alberi e delle foglie in particolare; il gusto con i frutti sempre presenti; l’udito con lo scorrere dell’acqua.<br>
+                Si deve agli arabi l’introduzione in Europa mediterranea di alcune importanti specie coltivate quali le melanzane, il limone, l’arancio, il pesco, l’albicocco, il cotone, la canna da zucchero, il riso, il carrubo.</p>
+
+             <img src="monastico.jpg" alt="Monastero"/>
+             <img src="medioevo.jpg" alt="Medioevo"/>
+                <p>Il medioevo è un periodo storico-culturale che abbraccia circa un migliaio di anni, dalla caduta dell’impero romano d’Occidente (476 d.C.) alla scoperta dell’America (1492).
+Nella città medievale, sul retro delle case, sorgevano angusti orti in cui si coltivavano, in ordinati riquadri, erbe aromatiche, generi di prima necessità, a volte anche vigneti e frutteti.<br>
+                L’ hortus eone/usus (latino, traducibile in italiano come “giardino recintato”) è la forma
+tipica di orto-giardino medievale, legato soprattutto a monasteri e conventi, dove la Chiesa garantiva organizzazione civile e sociale.<br>
+                San Benedetto da Norcia (480-555?) con la costruzione di numerosi insediamenti monastici in tutta Europa e l’applicazione della sua “Regola” contribuì enormemente alla insegnamento e alla diffusione delle tecniche agronomiche e di coltivazione.</p>
+			
+		<h1>Monasteri benedettini</h1>
+             <img src="benedettini.jpg" alt="Benedettini" />
+             <p>L’Umbria è la culla del monachesimo benedettino. Intorno al 480 a Norcia, tra le vallate appenniniche, nasce San Benedetto, ispiratore della famosa regola “Ora et labora” che prima dell’anno Mille determinò la formazione nell’Europa occidentale di una capillare rete di abbazie e monasteri, dall’Inghilterra all’Italia dalla Germania alla Penisola Iberica. I cosiddetti “monaci neri”, in considerazione del colore della veste che indossavano, favorirono a partire del VI secolo il radicamento di una nuova cultura agraria, attenta alla coltivazione dei campi, all’introduzione di tecniche più avanzate, alla gestione dei corsi d’acqua con la costruzione di mulini, alla cura degli orti. Perciò l’insediamento dei benedettini costituisce un capitolo fondamentale per lo sviluppo dell’agricoltura occidentale.
+             <br>In Umbria si riscontra la stretta relazione che intercorre tra ambiente, secolare lavoro dei monaci e forme architettoniche. Si può citare l’abbazia di San Pietro alle porte di Perugia che attualmente accoglie il dipartimento di agraria dell’Università di Perugia a testimoniare il lungo e proficuo legame che nel corso del tempo si è consolidato tra tradizione benedettina e modernizzazione delle pratiche agronomiche. Se prima erano i monaci a trarre vantaggio dai codici custoditi con cura nelle loro biblioteche adesso sono gli studenti a formarsi negli stessi ambienti. Ugualmente possiamo rivolgere l’attenzione ai monasteri di San Pietro in Valle (Ferentillo) o di Santa Croce in Sassovivo (Foligno) che con l’insediamento monastico in zone di montagna impervie rappresentano l’intento di colonizzare spazi ricoperti di boschi. Ma anche in pianura gli esempi sono altrettanto eloquenti. Qui riscontriamo gli effetti profondi dell’azione agraria portata avanti dei monasteri di San Salvatore di Monte Corona (Umbertide), di Santa Maria di Valdiponte (Perugia) o di di Santi Severo e Martirio (Orvieto) che hanno svolto un ruolo essenziale nello sviluppo delle vigne, degli ulivi, dei bachi da seta per arrivare in tempi più recenti al tabacco e il mais.
+Ma non possiamo dimenticare che l’Umbria è allo stesso tempo la terra di San Francesco. Non a caso proprio ad Assisi, nella città del “poverello”, a pochi metri di distanza della magnifica basilica affrescata dal Giotto, sorge l’abbazia di San Pietro che nel XIX secolo divenne colonia rivolta alla accoglienza e educazione di bambini orfani. L’obiettivo era di procedere all’inserimento nella società dei ragazzi, obbiettivo da compiersi attraverso l’insegnamento dei nei lavori nei campi e la formazione di un saper fare in agricoltura. Orientamento formativo simile a quello che oggi cresce con l’agricoltura sociale, un fenomeno che in Umbria si colloca in un fertile solco di tradizione e passato.</p>
+             
+             <h1>Rinascimento</h1>
+             <img src="villamedicea.jpg" alt="Villa Medicea"/> 
+             <p>norme per i giardini “dei re e dei signori”, ma anche “delle persone mezzane”: i primi cinti di mura, con fontana e “selva d’alberi”; i secondi cinti di siepi, alberi da frtto, ma non privi di una “pergola ombrosa”.
+Il trattato fu uno dei pochissimi testi di agronomia a vedere la luce nel periodo medievale.<br>
+             Nel 1537 un giovane diciottenne, Cosimo de’ Medici ricevette il titolo di Duca di Firenze.
+Cosimo, discendente di un ramo collaterale della famiglia che aveva tenuto le redini di Firenze nel secolo precedente, continuò il mecenatismo che aveva caratterizzato i suoi antenati.
+Nella corte fiorentina si seguivano con grande interesse sia gli aspetti artistici , sia gli aspetti scientifici e di questi aspetti gli orti e i giardini realizzati nel Cinquecento rimangono una delle migliori espressioni.
+Cosimo e i suoi due figli succeduti al trono granducale, Francesco e Ferdinando, furono tutti dei grandi appassionati di botanica e agricoltura.
+Nel 1543 Cosimo fondò a Pisa il primo orto botanico del mondo e due anni dopo, nel 1545, inaugurò il Giardino dei semplici di Firenze.</p>
+
+             <img src="villamediceaschema.jpg" alt="Villa Medice a Schema"/> 
+             <p>Tra il 1537 e il 1609 i primi tre granduchi portarono a compimento la rete delle ville medicee che vennero circondate da importanti orti-giardini. Le immagini delle ville medicee di Giusto Utens, commissionate da Ferdinando e dipinte tra il 1599 e il 1602, testimoniano le coltivazioni produttive distribuite nei giardini fiorentini: nella villa di Castello venne raccolta una delle più importanti collezioni di agrumi d’Europa, nella villa di Petraia gli alberi rappresentati nel giardino erano dei peri allevati nani. Queste coltivazioni particolari erano gradite per due motivi: non impedivano la vista dei panorami circostanti e, poiché venivano citate nei trattati di agricoltura di epoca romana, potevano essere prese ad esempio per ricreare gli orti-giardini all’antica.</p>
+             
+             <h1>Nell'Arte Moderna</h1>
+             <img src="jardin potager.jpg" alt="Jardin Potager di Verasilles"/> 
+             <p>La fama di Versailles non è legata solo ai favolosi giardini e agli edifici, un ruolo notevole nella creazione dell’aura mitica che circondava la reggia del Re Sole fu giocato dal Jardin potager e dal suo creatore: Jean De La Quintinie (1624 – 1688).<br>Sempre imitato e mai superato, questo giardino produttivo venne realizzato per approwigionare la viziata corte francese e per dimostrare l’eccellenza francese nell’orticoltura.
+De La Quintinie otteneva primizie impensate, piselli in aprile, fichi a giugno e lattughe a Natale per stupire gli ospiti stranieri di riguardo.
+Per avere un’idea della varietà seicentesca, il Jardin conteneva 50 cultivar di pere, compresa la preferita del re, la Bon-Chrétien, 20 cultivar di mele e 16 cultivar di lattuga.<br>La frutta e le verdure prodotte a Versailles furono uno degli argomenti preferiti della corte, come ricorda Madame de Sévigné nelle sue lettere “La mania per i piselli continua. L’attesa impaziente di mangiarli, mangiarli e il piacere di averli mangiati sono stati i tre argomenti di cui i principi hanno discusso negli ultimi quattro giorni”.
+Il re del resto non badava a spese per queste produzioni: della gestione degli orti, delle serre e dei 12.000 alberi da frutto si occupavano a tempo pieno trenta giardinieri esperti.</p>
+
+
+             <img src="versailles.jpg" alt="Versailles"/> 
+             <p>La frutta e le verdure prodotte a Versailles furono uno degli argomenti preferiti della corte, come ricorda Madame de Sévigné nelle sue lettere “La mania per i piselli continua. L’attesa impaziente di mangiarli, mangiarli e il piacere di averli mangiati sono stati i tre argomenti di cui i principi hanno discusso negli ultimi quattro giorni”.
+Il re del resto non badava a spese per queste produzioni: della gestione degli orti, delle serre e dei 12.000 alberi da frutto si occupavano a tempo pieno trenta giardinieri esperti.</p>
+         
+             <h1>Industrializzazione e orticoltura urbana</h1>
+             <img src="industrializzazione.jpg" alt=""/> 
+             <img src="malavita.jpg" alt=""/> 
+             <p>Durante il periodo della Rivoluzione Industriale in Europa un elevato numero di lavoratori e le loro famiglie emigrò dalle zone rurali verso le città in cerca di lavoro nelle fabbriche.<br>
+             Molto spesso queste famiglie vivevano in condizioni economiche precarie, di emarginazione sociale e di malnutrizione, per cui gli “orti dei poveri” (i migrant gardens anglosassoni, i jardins ouvriers francesi), allestiti in appezzamenti di proprietà delle amministrazioni locali, delle fabbriche o di comunità religiose, ebbero il compito di alleviare questa situazione permettendo la coltivazioni di ortaggi e l’allevamento di piccoli animali.</p>
+
+             <h1>GLi orti di guerra</h1>
+             <img src="guerra.jpg" alt=""/>
+             <img src="giornali.jpeg" alt=""/>
+             <p>L’utilità e la diffusione degli orti urbani divenne ancora più importante nella prima metà del XX secolo, durante le due Guerre Mondiali, quando la situazione socio­ economica era sconvolgente soprattutto dal punto di vista alimentare.<br>
+             Molte città infatti erano isolate dalle zone rurali periferiche cosicché i prodotti agricoli non riuscivano più a raggiungere i mercati cittadini ed erano venduti a prezzi molto alti o al mercato nero.<br>
+             Conseguentemente la produzione di derrate alimentari, soprattutto frutta e ortaggi, negli orti familiari e negli orti urbani (divenuti “orti di guerra” in Italia, Victory Gardens nei paesi anglosassoni) divenne essenziale per la sopravvivenza.</p>
+                      </div>
+		 <div class="bottom" id="contatti">
+			<div id="text3">
+
+			</div>
+		 </div>
+      </div>
+   </body>
+</html>

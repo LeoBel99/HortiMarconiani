@@ -1,0 +1,104 @@
+body{
+	margin:0px 0px 0px 0px;
+    background-color: rgba(36, 188, 61, 0.56);
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f3f3f3;
+	position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+
+#image1{
+	background-color: rgba(104, 47, 132, 0.42);
+	height:100%;
+	width:100%;
+}
+#text1{
+	height:100%;
+	width:100%;
+	border-top: 1px solid #b2b2b2;
+    
+}
+#text1 h1{
+	margin-left:40%;
+}
+#image2{
+	background-image: url('orto-tiburtina-1.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	height:100%;
+	width:100%;
+}
+#text2{
+	height:100%;
+	width:100%;
+	
+    
+}
+#text2 h1{
+	margin-left:40%;
+}
+#hr{
+    width: 40%;
+    height: 1px;
+    margin-left: 30%;
+    background-color: rgba(170, 170, 170, 0.83);
+    
+}
+#text3{
+	height:100%;
+	width:100%;
+	
+    
+}
+#text3 h1{
+	margin-left:40%;
+}
+
+p {
+    font-family: Calibri;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+h1{
+    font-family: Algerian,'Arial Black','Times New Roman';
+    font-style: inherit; 
+}
+
+
+
+
+
+
+
+
+
+
+
